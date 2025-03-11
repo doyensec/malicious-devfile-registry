@@ -2,8 +2,6 @@
 
 The project contains a malicious Devfile Registry usable to exploit CVE-2024-0402 in Gitlab.
 
-Any devfile client relying on it could be attacked with this PoC registry. Nevertheless, our main goal was building a reliable exploit for CVE-2024-0402.
-
 ## The Exploit
 
 A `nodejs:2.2.1` stack is indexed to expose the `archive.tar` file exploiting the path-traversal issue in [registry-support library before v1.1.0](https://github.com/devfile/registry-support/commit/10b01bc136bd082f59b1ac0c91797f4065792d7b){:target="_blank"}.
