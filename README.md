@@ -4,13 +4,13 @@ The project contains a malicious Devfile Registry usable to exploit CVE-2024-040
 
 ## The Exploit
 
-A `nodejs:2.2.1` stack is indexed to expose the `archive.tar` file exploiting the path-traversal issue in [registry-support library before v1.1.0](https://github.com/devfile/registry-support/commit/10b01bc136bd082f59b1ac0c91797f4065792d7b){:target="_blank"}.
+A `nodejs:2.2.1` stack is indexed to expose the `archive.tar` file exploiting the path-traversal issue in [registry-support library before v1.1.0](https://github.com/devfile/registry-support/commit/10b01bc136bd082f59b1ac0c91797f4065792d7b).
 
 *tar location*: `malicious-devfile-registry/stacks/nodejs/2.2.1/archive.tar`
 
 It was created using the [evilarc.py](https://github.com/ptoomey3/evilarc/blob/master/evilarc.py) to overwrite the `/var/opt/gitlab/.ssh/authorized_keys` in the target Gitlab Server with the SSH keys under `ssh-keys/` folder in this repo.
 
-```
+```bash
 python3 evilarc.py authorized_keys -f authzkeys.tar.gz -p var/opt/gitlab/.ssh/ -o unix
 ```
 
@@ -59,4 +59,7 @@ components:
 5. To trigger the file-write in the Gitlab UI, just start a new Workspace in the edited repo.
 After few seconds, the arbitrary file write should happen and the `ssh-keys/pockey.pub` will be added to the `authorized_keys` of the `git` user
 
-6. You should be able to enjoy an unrestricted shell as `git` with `ssh  -i ssh-keys/pockey git@<YOUR_GITLAB_SERVER>`
+6. You should be able to enjoy an unrestricted shell as `git` with
+```bash
+ssh  -i ssh-keys/pockey git@<YOUR_GITLAB_SERVER>
+```
