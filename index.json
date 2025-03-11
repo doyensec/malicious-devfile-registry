@@ -1,0 +1,49 @@
+[
+  {
+    "name": "nodejs",
+    "displayName": "Node.js Runtime",
+    "description": "Node.js application",
+    "type": "stack",
+    "tags": [
+      "Node.js",
+      "Express",
+      "ubi8"
+    ],
+    "icon": "https://raw.githubusercontent.com/devfile-samples/devfile-stack-icons/main/node-js.svg",
+    "projectType": "Node.js",
+    "language": "JavaScript",
+    "versions": [
+      {
+        "version": "2.2.1",
+        "schemaVersion": "2.2.0",
+        "default": true,
+        "description": "Node.js 18 application",
+        "tags": [
+          "Node.js",
+          "Express",
+          "ubi8"
+        ],
+        "icon": "https://raw.githubusercontent.com/devfile-samples/devfile-stack-icons/main/node-js.svg",
+        "links": {
+          "self": "devfile-catalog/nodejs:2.2.1"
+        },
+        "commandGroups": {
+          "build": true,
+          "debug": true,
+          "deploy": false,
+          "run": true,
+          "test": true
+        },
+        "resources": [
+          "devfile.yaml",
+          "archive.tar"
+        ],
+        "starterProjects": [
+          "nodejs-starter"
+        ],
+        "lastModified": "0001-01-01T00:00:00Z"
+      }
+    ],
+    "lastModified": "0001-01-01T00:00:00Z"
+  }
+]
