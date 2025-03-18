@@ -31,7 +31,7 @@ See the `index.json` listing it among the stack resources:
 
 ## Reproduction Steps
 
-Configure a Gitlab Instance EE with version <=16.8.0. Enable Workspaces on it following the docs and the extra notes in our dedicated [!exploitable series blogpost](https://blog.doyensec.com/2025/03/13/exploitable-gitlab.html). 
+Configure a Gitlab Instance EE with version <=16.8.0. Enable Workspaces on it following the docs and the extra notes in our dedicated [!exploitable series blogpost](https://blog.doyensec.com/2025/03/18/exploitable-gitlab.html). 
 
 Whenever ready, follow the steps below:
 
